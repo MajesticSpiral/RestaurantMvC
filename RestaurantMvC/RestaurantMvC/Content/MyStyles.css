@@ -1,0 +1,97 @@
+﻿body {
+	background: #800000;
+	margin: 0;
+	padding: 10px;
+	color: #e0dcab;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 90%;
+	line-height: 1.2;
+}
+
+#header-wrapper {
+	width: 100%;
+	min-width: 960px;
+	height: 104px;
+	background: url(../images/bg-header.png) repeat-x;
+	position: absolute;
+	clear: both;
+}
+
+
+#header {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+a:visited {
+	color: #e0dcab;
+	text-decoration: none;
+}
+
+a:link {
+	color: #e0dcab;
+	text-decoration: none;
+}
+
+#header #nav-menu-others {
+	float: right;
+	padding-top: 8px;
+	padding-right: 10px;
+	background-color: #800000;
+}
+
+ul {
+	display: flex;
+	list-style-type: none;
+}
+
+ul, ol, dl {
+	padding: 0;
+	margin: 0;
+}
+
+.clearfloat {
+	clear: both;
+	height: 0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+#header #nav-menu-others {
+	float: right;
+	padding-top: 8px;
+	padding-right: 10px;
+}
+
+	#header #nav-menu-others li a {
+		padding: 10px 10px 5px 5px;
+	}
+
+ #nav-menu li a {
+	padding: 10px 10px 5px 5px;
+    font-family: 'CrateRegular';
+    font-size: 150%;
+    text-decoration: none;
+    -moz-font-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    -webkit-font-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    -webkit-font-smoothing: antialiased;
+    font-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    display: block;
+}
+
+.login-bar {
+	float: right;
+	padding: 10px;
+}
+
+.main-footer {
+	clear: both;
+	position: relative;
+	padding: 10px 0px 0px 30px;
+
+}
+
+
+
+
