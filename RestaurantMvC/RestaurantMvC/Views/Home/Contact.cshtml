@@ -1,17 +1,49 @@
-﻿@{
-    ViewBag.Title = "Contact";
+﻿
+@{
+	ViewBag.Title = "Contact";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title - My ASP.NET Application</title>
+	<link href="~/Content/MyStyles.css" rel="stylesheet" />
+
+</head>
+<body>
+
+	<ul id="navlist">
+		<li><a href="@Url.Content("~/Home/Index")">Home</a></li>
+		<li><a href="@Url.Content("~/Home/About")">About</a></li>
+		<li><a href="@Url.Content("~/Home/Contact")">Contact</a></li>
+		<li><a href="@Url.Content("~/StoreManager/")">Admin</a></li>
+	</ul>
+	<header id="top" class="main-header">
+		<span class="title">Delicious tasting food available for a great price!</span>
+		<h1>Callum's Restaurant</h1>
+	</header>
+	<div class="primary-content t-border">
+		<h2>Contact Us</h2>
+		<p class="intro">
+			You can contact us through the link below <ul><li><a href="#">restaurantcallum@gmail.com</a></li></ul>
+		</p>
+
+
+	</div>
+	<!-- End .primary-content -->
+	@*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+
+
+
+
+
+</body>
+</html>
+
+
+

@@ -172,7 +172,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\MenuItemsController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\StoreManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,6 +211,11 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\cheese-burger.jpg" />
+    <Content Include="Images\drunkenbunkerlogo.jpg" />
+    <Content Include="Images\lynchburg lemonade.jpg" />
+    <Content Include="Images\restaurant.jpg" />
+    <Content Include="Images\wood.jpg" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -251,8 +257,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -274,15 +278,18 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\MenuItems\Create.cshtml" />
-    <Content Include="Views\MenuItems\Delete.cshtml" />
-    <Content Include="Views\MenuItems\Details.cshtml" />
-    <Content Include="Views\MenuItems\Edit.cshtml" />
-    <Content Include="Views\MenuItems\Index.cshtml" />
+    <Content Include="Views\StoreManager\Create.cshtml" />
+    <Content Include="Views\StoreManager\Delete.cshtml" />
+    <Content Include="Views\StoreManager\Details.cshtml" />
+    <Content Include="Views\StoreManager\Edit.cshtml" />
+    <Content Include="Views\StoreManager\Index.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="ViewModels\" />
+    <Folder Include="Views\Menu\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

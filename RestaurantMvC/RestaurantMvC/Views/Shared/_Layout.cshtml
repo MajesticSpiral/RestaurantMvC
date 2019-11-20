@@ -8,31 +8,14 @@
 
 </head>
 <body>
-	<header id="header">
-		<div id="nav-menu-others">
-			<ul>
-				<li>@Html.Partial("_LoginPartial")</li>
-			</ul>
-		</div>
+	
 
-		<div class="clearfloat"></div>
-	</header>
-
-	<div id="nav-menu">
-		<ul>
-			<li>@Html.ActionLink("Home", "Index", "Home")</li>
-			<li>@Html.ActionLink("About", "About", "Home")</li>
-			<li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-		</ul>
-	</div>
 
 	@*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
 
 	@RenderBody()
-	
-	<footer class="main-footer">
-		Made in MvC by Callum Cheshire
-	</footer>
+
+
 
 
 	@Scripts.Render("~/bundles/jquery")

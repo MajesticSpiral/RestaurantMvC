@@ -1,7 +1,49 @@
-﻿@{
-    ViewBag.Title = "About";
+﻿
+@{
+	ViewBag.Title = "About";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title - My ASP.NET Application</title>
+	<link href="~/Content/MyStyles.css" rel="stylesheet" />
+
+</head>
+<body>
+
+	<ul id="navlist">
+		<li><a href="@Url.Content("~/Home/Index")">Home</a></li>
+		<li><a href="@Url.Content("~/Home/About")">About</a></li>
+		<li><a href="@Url.Content("~/Home/Contact")">Contact</a></li>
+		<li><a href="@Url.Content("~/StoreManager/")">Admin</a></li>
+	</ul>
+	<header id="top" class="main-header">
+		<span class="title">Delicious tasting food available for a great price!</span>
+		<h1>Callum's Restaurant</h1>
+	</header>
+	<div class="primary-content t-border">
+		<h2>About Us</h2>
+		<p class="intro">
+			At Callum's Restauraunt, you'll find the best and freshest burgers in town. We cook our meat fresh every day and produce our own patties in the stores. We do not use any pre-made or frozen products. Our buns are being baked fresh every day and by ourselves. We only use ingredients from regional suppliers that we know personally ....
+		</p>
+		
+
+	</div>
+	<!-- End .primary-content -->
+	
+	@*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+
+
+
+
+
+</body>
+</html>
+
+

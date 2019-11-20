@@ -10,17 +10,17 @@ using RestaurantMvC.Models;
 
 namespace RestaurantMvC.Controllers
 {
-    public class MenuItemsController : Controller
+    public class StoreManagerController : Controller
     {
         private RestaurantEntities db = new RestaurantEntities();
 
-        // GET: MenuItems
+        // GET: StoreManager
         public ActionResult Index()
         {
             return View(db.MenuItems.ToList());
         }
 
-        // GET: MenuItems/Details/5
+        // GET: StoreManager/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,13 +35,13 @@ namespace RestaurantMvC.Controllers
             return View(menuItem);
         }
 
-        // GET: MenuItems/Create
+        // GET: StoreManager/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: MenuItems/Create
+        // POST: StoreManager/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -58,7 +58,7 @@ namespace RestaurantMvC.Controllers
             return View(menuItem);
         }
 
-        // GET: MenuItems/Edit/5
+        // GET: StoreManager/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,7 +73,7 @@ namespace RestaurantMvC.Controllers
             return View(menuItem);
         }
 
-        // POST: MenuItems/Edit/5
+        // POST: StoreManager/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -89,7 +89,7 @@ namespace RestaurantMvC.Controllers
             return View(menuItem);
         }
 
-        // GET: MenuItems/Delete/5
+        // GET: StoreManager/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,7 +104,7 @@ namespace RestaurantMvC.Controllers
             return View(menuItem);
         }
 
-        // POST: MenuItems/Delete/5
+        // POST: StoreManager/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

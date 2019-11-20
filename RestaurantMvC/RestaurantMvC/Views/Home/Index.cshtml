@@ -1,9 +1,80 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Callum's Restauraunt </title>
 
-<h1>Welcome to Callum's Restaurant!</h1>
+	<link href="~/Content/MyStyles.css" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width">
+</head>
 
-<p>The best food and drinks in town join now for free to make reservations early!, and check out our promotions every week.</p>
 
 
+<body>
+
+	<ul id="navlist">
+		<li><a href="@Url.Content("~/Home/Index")">Home</a></li>
+		<li><a href="@Url.Content("~/Home/About")">About</a></li>
+		<li><a href="@Url.Content("~/Home/Contact")">Contact</a></li>
+		<li><a href="@Url.Content("~/StoreManager/")">Admin</a></li>
+	</ul>
+	<header id="top" class="main-header">
+		<span class="title">Delicious tasting food available for a great price!</span>
+		<h1>Callum's Restaurant</h1>
+	</header>
+
+
+	<div class="primary-content t-border">
+		<p class="intro">
+			At Callum's Restauraunt, you'll find the best and freshest burgers in town. We cook our meat fresh every day and produce our own patties in the stores. We do not use any pre-made or frozen products. Our buns are being baked fresh every day and by ourselves. We only use ingredients from regional suppliers that we know personally ....
+		</p>
+		<a class="callout" href="#more">Find out more</a>
+
+		<div class="menuitems">
+			<h2>What's on the Menu?</h2>
+
+			<p>
+				Only the finest meals and beverages!.
+			</p>
+		</div><!-- End .menutitems -->
+
+
+
+
+		<a class="callout" href="#menuitems">Check out more!</a>
+	</div><!-- End .primary-content -->
+	<div class="secondary-content t-border group">
+		<div class="burgers">
+			<img src="~/Images/cheese-burger.jpg" />
+			<h3>From Burgers to Pizza</h3>
+			<p>
+				Callum's Restaurant contains the most delicious burgers and pizzas available.
+			</p>
+			<ul>
+				<li><a href="#hotels">Steak Burger</a></li>
+				<li><a href="#resorts">Meat Feast Pizza</a></li>
+				<li><a href="#lodging">Chicken and Bacon Panini</a></li>
+			</ul>
+		</div>
+
+		<div class="tips">
+			<img src="~/Images/lynchburg lemonade.jpg" />
+
+			<h3>Drinks</h3>
+			<p>
+				Ranging from beer to cocktails we have it!
+			</p>
+			<ol>
+				<li>Lynchburg Lemonade</li>
+				<li>Cider</li>
+				<li>Carlsburg</li>
+				<li>Bud Light</li>
+			</ol>
+		</div>
+	</div><!-- End .secondary-content -->
+
+	<footer class="main-footer">
+		<p>All rights reserved to <a href="#">Callum's Restaurant</a>.</p>
+		<a href="#top">Back to top &raquo;</a>
+	</footer>
+</body>
+</html>
