@@ -29,5 +29,9 @@ namespace RestaurantMvC.Models
         public virtual DbSet<Item> Items { get; set; }
         public virtual DbSet<MenuItem> MenuItems { get; set; }
         public virtual DbSet<PaymentType> PaymentTypes { get; set; }
-    }
+
+		public System.Data.Entity.DbSet<RestaurantMvC.ViewModels.CustomerViewModel> CustomerViewModels { get; set; }
+
+		public System.Data.Entity.DbSet<RestaurantMvC.Models.Recipe> Recipes { get; set; }
+	}
 }

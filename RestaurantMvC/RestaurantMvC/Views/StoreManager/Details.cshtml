@@ -1,4 +1,4 @@
-﻿@model RestaurantMvC.Models.MenuItem
+﻿@model RestaurantMvC.Models.Item
 
 @{
     ViewBag.Title = "Details";
@@ -8,7 +8,7 @@
 <h2>Details</h2>
 
 <div>
-    <h4>MenuItem</h4>
+    <h4>Item</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -17,14 +17,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.ItemName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ItemDescripion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ItemDescripion)
         </dd>
 
         <dt>

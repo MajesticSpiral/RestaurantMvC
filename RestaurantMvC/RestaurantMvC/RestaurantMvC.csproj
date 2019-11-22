@@ -171,6 +171,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\StoreManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -321,11 +322,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\StoreManager\Create.cshtml" />
-    <Content Include="Views\StoreManager\Delete.cshtml" />
-    <Content Include="Views\StoreManager\Details.cshtml" />
-    <Content Include="Views\StoreManager\Edit.cshtml" />
-    <Content Include="Views\StoreManager\Index.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Menu\Details.cshtml" />
@@ -340,6 +336,11 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Menu\Browse.cshtml" />
     <Content Include="Views\BookTable\Index.cshtml" />
+    <Content Include="Views\StoreManager\Index.cshtml" />
+    <Content Include="Views\StoreManager\Create.cshtml" />
+    <Content Include="Views\StoreManager\Edit.cshtml" />
+    <Content Include="Views\StoreManager\Delete.cshtml" />
+    <Content Include="Views\StoreManager\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
