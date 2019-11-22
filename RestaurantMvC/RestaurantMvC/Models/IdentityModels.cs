@@ -29,5 +29,7 @@ namespace RestaurantMvC.Models
         {
             return new ApplicationDbContext();
         }
-    }
+
+		public System.Data.Entity.DbSet<RestaurantMvC.Models.FoodItem> FoodItems { get; set; }
+	}
 }

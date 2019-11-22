@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using RestaurantMvC.Models;
 namespace RestaurantMvC.Controllers
 {
     public class MenuController : Controller
@@ -16,21 +16,18 @@ namespace RestaurantMvC.Controllers
 		}
 		//
 		// GET: /Menu/Browse?Recipe=Burger
-		public string Browse(string recipe)
+		public ActionResult Browse(string Title)
 		{
-			string message = HttpUtility.HtmlEncode("Menu.Browse, Recipe = "
-		+ recipe);
-
-			return message;
+			var foodItemModel = new FoodItem { Title = Title };
+			return View(foodItemModel);
 		}
 
 		//
 		// GET: /Menu/Details/5
-		public string Details(int id)
+		public ActionResult Details(int id)
 		{
-			string message = "Menu.Details, ID = " + id;
-
-			return message;
+			var recipe= new Recipe { Name = "Recipe " + id };
+			return View(recipe);
 		}
 
 
