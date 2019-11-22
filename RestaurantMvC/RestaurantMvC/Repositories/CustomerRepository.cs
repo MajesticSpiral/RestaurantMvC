@@ -9,7 +9,6 @@ namespace RestaurantMvC.Repositories
 {
 	public class CustomerRepository
 	{
-		
 		private RestaurantDBEntities objrestaurantDBEntities;
 		public CustomerRepository()
 		{
@@ -17,7 +16,7 @@ namespace RestaurantMvC.Repositories
 			objrestaurantDBEntities = new RestaurantDBEntities();
 		}
 
-		public IEnumerable<SelectListItem> GetAllItems()
+		public IEnumerable<SelectListItem> GetAllCustomers()
 		{
 			var objSelectListItems = new List<SelectListItem>();
 			objSelectListItems = (from obj in objrestaurantDBEntities.Customers
@@ -30,6 +29,5 @@ namespace RestaurantMvC.Repositories
 
 			return objSelectListItems;
 		}
-
 	}
 }
