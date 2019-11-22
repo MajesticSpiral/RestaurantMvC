@@ -5,31 +5,35 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<fieldset>
 
-<div>
-    <h4>Item</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ItemName)
-        </dt>
+	<legend>
+		Details
+	</legend>
+	<div>
+		<h4>Item</h4>
+		<hr />
+		<dl class="dl-horizontal">
+			<dt>
+				@Html.DisplayNameFor(model => model.ItemName)
+			</dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ItemName)
-        </dd>
+			<dd>
+				@Html.DisplayFor(model => model.ItemName)
+			</dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ItemPrice)
-        </dt>
+			<dt>
+				@Html.DisplayNameFor(model => model.ItemPrice)
+			</dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ItemPrice)
-        </dd>
+			<dd>
+				@Html.DisplayFor(model => model.ItemPrice)
+			</dd>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ItemId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+		</dl>
+	</div>
+	<p>
+		@Html.ActionLink("Edit", "Edit", new { id = Model.ItemId }) |
+		@Html.ActionLink("Back to List", "Index")
+	</p>
+</fieldset>
