@@ -48,7 +48,7 @@ h3 {
 }
 
 img {
-	max-width: 100%;
+	
 	margin-bottom: 20px;
 	border-radius: 10px;
 }
@@ -62,26 +62,185 @@ li {
 	margin-bottom: 10px;
 }
 
-/* Pseudo-classes ------------------ */
-
-a:link {
-	color: rgb(255, 169, 73);
-	text-decoration: none;
+/* --- Section --- */
+.section {
+	position: relative;
+	padding-top: 80px;
+	padding-bottom: 80px;
 }
 
-a:visited {
-	color: lightblue;
+.section-header .title {
+	font-family: 'Dancing Script', cursive;
+	margin-top: 0px;
 }
 
-a:hover {
-	color: rgba(255, 169, 73, .4);
+.title:after {
+	content: "";
+	display: block;
+	width: 15px;
+	height: 2px;
+	background-color: #f36700;
+	margin: 15px 0px 30px;
 }
 
-a:active {
-	color: lightcoral;
+.text-center .title:after {
+	margin: 15px auto 30px;
 }
+
+.section-header .sub-title {
+	font-weight: 400;
+	color: #f36700;
+}
+
+.banner-area {
+	position: relative;
+	padding-bottom: 40px;
+}
+
+.banner-area .home-wrapper {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 0;
+	right: 0;
+}
+
+#home {
+	height: 100vh;
+}
+
+.home-content h1 {
+	font-family: 'Dancing Script', cursive;
+}
+
+.event {
+	position: relative;
+	margin: 15px 0px;
+}
+
+.event .event-img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 160px;
+}
+
+	.event .event-img img {
+		width: 100%;
+	}
+
+.event .event-day {
+	position: absolute;
+	top: 0;
+	width: 60px;
+	height: 60px;
+	background: #f36700;
+	text-align: center;
+}
+
+	.event .event-day span {
+		color: #FFF;
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		left: 0;
+		right: 0;
+		font-weight: 700;
+	}
+
+	.event .event-day:after, .event .event-day:before {
+		content: "";
+		width: 0;
+		height: 0;
+		border-style: solid;
+		position: absolute;
+		bottom: -20px;
+	}
+
+	.event .event-day:before {
+		left: 0;
+		border-width: 20px 60px 0 0;
+		border-color: #f36500 transparent transparent;
+	}
+
+	.event .event-day:after {
+		right: 0;
+		border-width: 0 60px 20px 0;
+		border-color: transparent #f36500 transparent;
+	}
+
+.event .event-content {
+	min-height: 160px;
+	padding-left: 175px;
+}
+
+	.event .event-content h3 {
+		margin-top: 0px;
+	}
+
 
 /* Main Styles --------------------- */
+
+/* --- Section --- */
+.section {
+	position: relative;
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+.section-header .title {
+	font-family: 'Dancing Script', cursive;
+	margin-top: 0px;
+}
+
+.title:after {
+	content: "";
+	display: block;
+	width: 15px;
+	height: 2px;
+	background-color: #f36700;
+	margin: 15px 0px 30px;
+}
+
+.text-center .title:after {
+	margin: 15px auto 30px;
+}
+
+.section-header .sub-title {
+	font-weight: 400;
+	color: #f36700;
+}
+
+/* --- Background Image --- */
+.bg-image {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-position: center;
+	background-size: cover;
+	z-index: -1;
+}
+
+	.bg-image.bg-parallax {
+		background-attachment: fixed;
+	}
+
+	.bg-image.overlay:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		opacity: 0.7;
+		background-color: #000;
+	}
 
 .main-header {
 	padding-top: 170px;
@@ -90,14 +249,7 @@ a:active {
 	background-size: cover;
 }
 
-.title {
-	color: white;
-	font-size: 1.625rem; /* 26px/16px */
-	letter-spacing: .065em;
-	font-weight: 200;
-	border-bottom: 2px solid;
-	padding-bottom: 10px;
-}
+
 
 .intro {
 	font-size: 1.25em; /* 20px/16px */
@@ -127,12 +279,6 @@ a:active {
 	padding: 0 9px 3px;
 	margin-top: 20px;
 	display: inline-block;
-}
-
-.main-footer {
-	padding-top: 60px;
-	padding-bottom: 60px;
-	border-bottom: 10px solid #ffa949;
 }
 
 .t-border {
@@ -412,10 +558,7 @@ ul#navlist {
 		padding: 50px 25px 0;
 	}
 
-	.title {
-		font-size: 1.3rem;
-		border: none;
-	}
+	
 
 	h1 {
 		font-size: 5rem;
@@ -428,6 +571,7 @@ ul#navlist {
 
 	.intro {
 		font-size: 1rem;
+		text-align: center;
 	}
 
 	.resorts,
@@ -436,9 +580,31 @@ ul#navlist {
 		width: 100%;
 	}
 
-	.main-footer {
-		padding: 20px 0;
-	}
 }
+
+
+#footer {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #ffa949;
+}
+
+.footer-nav {
+	text-align: right
+}
+
+	.footer-nav a {
+		display: inline-block;
+		margin-left: 15px;
+		color: blue;
+		font-size: 14px;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+
+		.footer-nav a:hover, .footer-nav a:focus {
+			color: #f36500;
+		}
+
 
 
