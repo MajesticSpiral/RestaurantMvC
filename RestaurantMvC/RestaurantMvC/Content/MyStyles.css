@@ -223,6 +223,146 @@ ul#navlist {
 }
 
 
+/* --- Bottom Nav --- */
+#header #bottom-nav .container {
+	padding: 10px 15px;
+	background-color: #F9F9F9;
+}
+
+.main-nav li a, .contact-nav li a {
+	font-size: 14px;
+}
+
+	.main-nav li a:hover, .contact-nav li a:hover, .main-nav li a:focus, .contact-nav li a:focus {
+		background-color: transparent;
+		color: #f36700;
+	}
+
+.main-nav li a {
+	text-transform: uppercase;
+}
+
+.contact-nav {
+	float: right;
+}
+
+	.contact-nav li i {
+		color: #f36700;
+	}
+
+.cta-nav {
+	float: right;
+}
+
+	.cta-nav li {
+		margin-top: 5px;
+		display: inline-block;
+	}
+
+		.cta-nav li a {
+			padding: 8px 25px;
+			font-size: 14px;
+		}
+
+.main-nav {
+	margin: 0;
+	text-align: center;
+	max-height: 50%;
+	overflow-y: scroll;
+}
+
+
+#header {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-top: 15px;
+	z-index: 22;
+}
+
+	#header #top-nav .container {
+		padding: 10px 15px;
+		background-color: #FFF;
+	}
+
+#top-nav .logo {
+	float: left;
+	height: 50px;
+	padding: 5px;
+}
+
+	#top-nav .logo img {
+		max-height: 40px;
+	}
+
+#top-nav .social-nav {
+	float: right;
+}
+
+.social-nav li {
+	display: inline-block;
+	margin-top: 5px;
+}
+
+	.social-nav li a {
+		display: block;
+		width: 40px;
+		line-height: 40px;
+		text-align: center;
+		color: #969696;
+		border: 1px solid #ECECEC;
+		border-radius: 50%;
+		-webkit-transition: 0.2s all;
+		transition: 0.2s all;
+	}
+
+		.social-nav li a:hover, .social-nav li a:focus {
+			color: #FFF;
+			background-color: #f36700;
+			border-color: #f36700;
+		}
+
+#header #bottom-nav .container {
+	padding: 10px 15px;
+	background-color: #F9F9F9;
+}
+
+.main-nav li a, .contact-nav li a {
+	font-size: 14px;
+}
+
+	.main-nav li a:hover, .contact-nav li a:hover, .main-nav li a:focus, .contact-nav li a:focus {
+		background-color: transparent;
+		color: #f36700;
+	}
+
+.main-nav li a {
+	text-transform: uppercase;
+}
+
+.contact-nav {
+	float: right;
+}
+
+	.contact-nav li i {
+		color: #f36700;
+	}
+
+.cta-nav {
+	float: right;
+}
+
+	.cta-nav li {
+		margin-top: 5px;
+		display: inline-block;
+	}
+
+		.cta-nav li a {
+			padding: 8px 25px;
+			font-size: 14px;
+		}
+
+
 /* Floated Columns ------------------ */
 .burgers,
 .tips {

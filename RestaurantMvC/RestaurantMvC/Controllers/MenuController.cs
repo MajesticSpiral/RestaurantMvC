@@ -10,9 +10,9 @@ namespace RestaurantMvC.Controllers
     {
 		//
 		// GET: /Menu/
-		public string Index()
+		public ActionResult Index()
 		{
-			return "Hello from Menu.Index()";
+			return View();
 		}
 		//
 		// GET: /Menu/Browse?Recipe=Burger

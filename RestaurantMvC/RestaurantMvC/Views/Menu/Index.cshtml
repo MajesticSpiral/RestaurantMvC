@@ -1,0 +1,361 @@
+﻿
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+
+	<script src="~/Content/jquery.min.js"></script>
+	<script src="~/Content/bootstrap.min.js"></script>
+	<script src="~/Content/main.js"></script>
+</head>
+
+<style>
+	body {
+		color: #969696;
+		font-size: 16px;
+		overflow-x: hidden;
+		font-family: 'Cabin', sans-serif;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 700;
+		color: #151515;
+		font-family: 'Quicksand', sans-serif;
+	}
+
+	h1 {
+		font-size: 54px;
+	}
+
+	h2 {
+		font-size: 36px;
+	}
+
+	h3 {
+		font-size: 24px;
+	}
+
+	h4 {
+		font-size: 16px;
+	}
+
+	a {
+		color: #151515;
+		-webkit-transition: 0.2s color;
+		transition: 0.2s color;
+	}
+
+		a:hover,
+		a:focus {
+			color: #f36700;
+			text-decoration: none;
+			outline: none;
+		}
+
+	ul, ol {
+		margin: 0;
+		padding: 0;
+		list-style: none
+	}
+
+	.white-text {
+		color: #FFF;
+		text-align:center;
+	}
+
+	/* --- Section --- */
+	.section {
+		position: relative;
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	.section-header .title {
+		font-family: 'Dancing Script', cursive;
+		margin-top: 0px;
+	}
+
+	.title:after {
+		content: "";
+		display: block;
+		width: 15px;
+		height: 2px;
+		background-color: #f36700;
+		margin: 15px 0px 30px;
+	}
+
+	.text-center .title:after {
+		margin: 15px auto 30px;
+	}
+
+	.section-header .sub-title {
+		font-weight: 400;
+		color: #f36700;
+	}
+
+	/* --- menu nav --- */
+	.menu-nav {
+		text-align: center;
+	}
+
+	.menu-nav li {
+		position: relative;
+		display: inline-block;
+		margin-right: -4px;
+		border-bottom: 1px solid #ECECEC;
+		background-color: #FFF;
+	}
+
+		.menu-nav li + li {
+			-webkit-box-shadow: -1px 0px 0px 0px #ECECEC;
+			box-shadow: -1px 0px 0px 0px #ECECEC;
+		}
+
+		.menu-nav li a {
+			font-family: 'Quicksand', sans-serif;
+			display: block;
+			padding: 30px;
+		}
+
+		.menu-nav li.active a {
+			color: #FFF;
+			background-color: #f36700;
+		}
+
+		.menu-nav li.active:before, .menu-nav li.active:after {
+			content: "";
+			width: 0;
+			height: 0;
+			position: absolute;
+			bottom: -19px;
+			border-style: solid;
+			z-index: 1;
+		}
+
+		.menu-nav li.active:before {
+			left: 0;
+			border-width: 20px 60px 0 0;
+			border-color: #f36500 transparent transparent;
+		}
+
+		.menu-nav li.active:after {
+			right: 0;
+			border-width: 0 60px 20px 0;
+			border-color: transparent #f36500 transparent;
+		}
+	#menu-content {
+		overflow: auto;
+		padding: 30px 2% 30px;
+		background-color: #FFF;
+	}
+
+	.single-dish + .single-dish {
+		margin-top: 30px;
+	}
+
+	.single-dish .single-dish-heading {
+		position: relative;
+		
+	}
+
+		.single-dish .single-dish-heading:before {
+			content: "";
+			display: block;
+			position: relative;
+			top: 25px;
+			height: 1px;
+			width: 100%;
+			border-top: 1px dashed #151515;
+			z-index: -1;
+		}
+
+	.single-dish .name {
+		display:inline-block;
+		font-family: 'Cabin', sans-serif;
+		background-color: #FFF;
+		padding-right: 10px;
+		font-weight: 400;
+	}
+
+	.single-dish .price {
+		float: right;
+		background-color: #FFF;
+		padding-left: 10px;
+		color: #f36700;
+	}
+
+	/* --- Background Image --- */
+	.bg-image {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-position: center;
+		background-size: cover;
+		z-index: -1;
+	}
+
+		.bg-image.bg-parallax {
+			background-attachment: fixed;
+		}
+
+		.bg-image.overlay:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			opacity: 0.7;
+			background-color: #000;
+		}
+</style>
+
+
+<!-- Menu -->
+<div id="menu" class="section">
+
+	<!-- Backgound Image -->
+	<div class="bg-image bg-parallax overlay" style="background-image:url(/Images/background01.jpg)"></div>
+	<!-- /Backgound Image -->
+	<!-- container -->
+	<div class="container">
+
+		<!-- row -->
+		<div class="row">
+
+			<div class="section-header text-center">
+				
+				<h2 class="title white-text">Our Menu</h2>
+			</div>
+
+			<!-- menu nav -->
+			<ul class="menu-nav">
+				<li class="active"><a data-toggle="tab" href="#menu1">Dinner</a></li>
+				<li><a data-toggle="tab" href="#menu1"></a></li>
+				<li><a data-toggle="tab" href="#menu1">Lunch</a></li>
+				<li><a data-toggle="tab" href="#menu1">Dessert</a></li>
+			</ul>
+			<!-- /menu nav -->
+			<!-- menu content -->
+			<div id="menu-content" class="tab-content">
+
+				<!-- menu1 -->
+				<div id="menu1" class="tab-pane fade in active">
+					<div class="col-md-6">
+
+						<!-- single dish -->
+						<div class="single-dish">
+							<div class="single-dish-heading">
+								<h4 class="name">Basted Rhubarb Mussels</h4>
+								<h4 class="price">£57</h4>
+							</div>
+							<p>te vero tritani iuvaret vis. Nec odio periculis adipiscing an.</p>
+						</div>
+						<!-- /single dish -->
+						<!-- single dish -->
+						<div class="single-dish">
+							<div class="single-dish-heading">
+								<h4 class="name">Steamed Chili Moussaka</h4>
+								<h4 class="price">£145</h4>
+							</div>
+							<p>te vero tritani iuvaret vis. Nec odio periculis adipiscing an.</p>
+						</div>
+						<!-- /single dish -->
+						<!-- single dish -->
+						<div class="single-dish">
+							<div class="single-dish-heading">
+								<h4 class="name">Blanched Fennel & Orange Lasagna</h4>
+								<h4 class="price">£79</h4>
+							</div>
+							<p>te vero tritani iuvaret vis. Nec odio periculis adipiscing an.</p>
+						</div>
+						<!-- /single dish -->
+						<!-- single dish -->
+						<div class="single-dish">
+							<div class="single-dish-heading">
+								<h4 class="name">Slow-Cooked Basil & Lime Ostrich</h4>
+								<h4 class="price">57£</h4>
+							</div>
+							<p>te vero tritani iuvaret vis. Nec odio periculis adipiscing an.</p>
+						</div>
+						<!-- /single dish -->
+						<!-- single dish -->
+						<div class="single-dish">
+							<div class="single-dish-heading">
+								<h4 class="name">Stuffed Oregano Chicken</h4>
+								<h4 class="price">£145</h4>
+							</div>
+							<p>te vero tritani iuvaret vis. Nec odio periculis adipiscing an.</p>
+						</div>
+						<!-- /single dish -->
+
+					</div>
+
+					<div class="col-md-6">
+
+						<!-- single dish -->
+						<div class="single-dish">
+							<div class="single-dish-heading">
+								<h4 class="name">Pressure-Fried Asparagus Chicken</h4>
+								<h4 class="price">£57</h4>
+							</div>
+							<p>te vero tritani iuvaret vis. Nec odio periculis adipiscing an.</p>
+						</div>
+						<!-- /single dish -->
+						<!-- single dish -->
+						<div class="single-dish">
+							<div class="single-dish-heading">
+								<h4 class="name">Tenderized Egg & Coconut Duck</h4>
+								<h4 class="price">£87</h4>
+							</div>
+							<p>te vero tritani iuvaret vis. Nec odio periculis adipiscing an.</p>
+						</div>
+						<!-- /single dish -->
+						<!-- single dish -->
+						<div class="single-dish">
+							<div class="single-dish-heading">
+								<h4 class="name">Milk Chocolate Gingerbread</h4>
+								<h4 class="price">£155</h4>
+							</div>
+							<p>te vero tritani iuvaret vis. Nec odio periculis adipiscing an.</p>
+						</div>
+						<!-- /single dish -->
+						<!-- single dish -->
+						<div class="single-dish">
+							<div class="single-dish-heading">
+								<h4 class="name">Simmered Mango & Pine Rabbit</h4>
+								<h4 class="price">£57</h4>
+							</div>
+							<p>te vero tritani iuvaret vis. Nec odio periculis adipiscing an.</p>
+						</div>
+						<!-- /single dish -->
+						<!-- single dish -->
+						<div class="single-dish">
+							<div class="single-dish-heading">
+								<h4 class="name">Red Wine Surprise</h4>
+								<h4 class="price">£87</h4>
+							</div>
+							<p>te vero tritani iuvaret vis. Nec odio periculis adipiscing an.</p>
+						</div>
+						<!-- /single dish -->
+
+					</div>
+
+				</div>
+				<!-- /menu1 -->
+
+			</div>
+			<!-- /menu content -->
+
+		</div>
+		<!-- /row -->
+
+	</div>
+	<!-- /container -->
+
+</div>
+<!-- /Menu -->

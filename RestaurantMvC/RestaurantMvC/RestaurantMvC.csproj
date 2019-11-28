@@ -224,9 +224,13 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.min.js" />
+    <Content Include="Content\jquery.min.js" />
+    <Content Include="Content\main.js" />
     <Content Include="Content\MyStyles.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\background01.jpg" />
     <Content Include="Images\cheese-burger.jpg" />
     <Content Include="Images\drunkenbunkerlogo.jpg" />
     <Content Include="Images\lynchburg lemonade.jpg" />
@@ -341,6 +345,7 @@
     <Content Include="Views\StoreManager\Edit.cshtml" />
     <Content Include="Views\StoreManager\Delete.cshtml" />
     <Content Include="Views\StoreManager\Details.cshtml" />
+    <Content Include="Views\Menu\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
