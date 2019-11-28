@@ -171,6 +171,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\ReservationController.cs" />
     <Compile Include="Controllers\StoreManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -231,6 +232,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\background01.jpg" />
+    <Content Include="Images\background03.jpg" />
     <Content Include="Images\cheese-burger.jpg" />
     <Content Include="Images\drunkenbunkerlogo.jpg" />
     <Content Include="Images\lynchburg lemonade.jpg" />
@@ -275,6 +277,8 @@
     <Content Include="Models\Restaurant.edmx.diagram">
       <DependentUpon>Restaurant.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\CallumRestaurant - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\CallumRestaurant - Web Deploy1.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -346,6 +350,7 @@
     <Content Include="Views\StoreManager\Delete.cshtml" />
     <Content Include="Views\StoreManager\Details.cshtml" />
     <Content Include="Views\Menu\Index.cshtml" />
+    <Content Include="Views\Reservation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
