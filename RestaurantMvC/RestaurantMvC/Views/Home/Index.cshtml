@@ -3,470 +3,371 @@
 	ViewBag.Title = "Home";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<!DOCTYPE HTML>
 
-<!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+
+	<!-- Animate.css -->
+
+	<link href="~/Content/animate.css" rel="stylesheet" />
+
+	<!-- Icomoon Icon Fonts-->
+
+	<!-- Themify Icons-->
+	<link href="~/Content/themify-icons.css" rel="stylesheet" />
+	<!-- Bootstrap  -->
+	<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+	<!-- Magnific Popup -->
+	<link href="~/Content/magnific-popup.css" rel="stylesheet" />
+	<!-- Bootstrap DateTimePicker -->
+	<link href="~/Content/bootstrap-datepicker.min.css" rel="stylesheet" />
 
 
-	<title>@ViewBag.Title - Callum's Restaurant</title>
+	<!-- Owl Carousel  -->
 
-	<link href="~/Content/MyStyles.css" rel="stylesheet" />
-	<script src="~/Content/jquery.min.js"></script>
-	<script src="~/Content/bootstrap.min.js"></script>
-	<script src="~/Content/main.js"></script>
+	<link href="~/Content/owl.carousel.min.css" rel="stylesheet" />
 
-	<style>
-		.bg-image {
-			position: absolute;
-			left: 0;
-			right: 0;
-			top: 0;
-			bottom: 0;
-			background-position: center;
-			background-size: cover;
-			z-index: -1;
-		}
-
-			.bg-image.bg-parallax {
-				background-attachment: fixed;
-			}
-
-			.bg-image.overlay:after {
-				content: "";
-				position: absolute;
-				left: 0;
-				right: 0;
-				top: 0;
-				bottom: 0;
-				opacity: 0.7;
-				background-color: #000;
-			}
-
-		.banner-area {
-			position: relative;
-			padding-bottom: 40px;
-		}
-
-			.banner-area .home-wrapper {
-				position: absolute;
-				top: 50%;
-				-webkit-transform: translateY(-50%);
-				-ms-transform: translateY(-50%);
-				transform: translateY(-50%);
-				left: 0;
-				right: 0;
-			}
-
-		#home {
-			height: 100vh;
-		}
-
-		.home-content h1 {
-			font-family: 'Dancing Script', cursive;
-		}
-
-		.event {
-			position: relative;
-			margin: 15px 0px;
-		}
-
-			.event .event-img {
-				position: absolute;
-				left: 0;
-				top: 0;
-				width: 160px;
-			}
-
-				.event .event-img img {
-					width: 100%;
-				}
-
-			.event .event-day {
-				position: absolute;
-				top: 0;
-				width: 85px;
-				height: 70px;
-				background: #f36700;
-				text-align: center;
-				padding: 10px;
-			}
-
-				.event .event-day span {
-					color: #FFF;
-					position: absolute;
-					top: 50%;
-					-webkit-transform: translateY(-50%);
-					-ms-transform: translateY(-50%);
-					transform: translateY(-50%);
-					left: 0;
-					right: 0;
-					font-weight: 700;
-				}
-
-				.event .event-day:after, .event .event-day:before {
-					content: "";
-					width: 0;
-					height: 0;
-					border-style: solid;
-					position: absolute;
-					bottom: -20px;
-				}
-
-				.event .event-day:before {
-					left: 0;
-					border-width: 20px 60px 0 0;
-					border-color: #f36500 transparent transparent;
-				}
-
-				.event .event-day:after {
-					right: 0;
-					border-width: 0 60px 20px 0;
-					border-color: transparent #f36500 transparent;
-				}
-
-			.event .event-content {
-				min-height: 160px;
-				padding-left: 175px;
-			}
-
-				.event .event-content h3 {
-					margin-top: 0px;
-				}
-
-		/* --- Section --- */
-		.section {
-			position: relative;
-			padding-top: 80px;
-			padding-bottom: 80px;
-		}
-
-		.section-header .title {
-			font-family: 'Dancing Script', cursive;
-			margin-top: 0px;
-		}
-
-		.title:after {
-			content: "";
-			display: block;
-			width: 15px;
-			height: 2px;
-			background-color: #f36700;
-			margin: 15px 0px 30px;
-		}
-
-		.text-center .title:after {
-			margin: 15px auto 30px;
-		}
-
-		.section-header .sub-title {
-			font-weight: 400;
-			color: #f36700;
-		}
-
-		.sub-title {
-			font-weight: 400;
-			color: #f36700;
-			text-align: center;
-		}
-
-		.title {
-			color: #000;
-			font-size: 1.625rem;
-			letter-spacing: .065em;
-			font-weight: 200;
-			padding-bottom: 10px;
-			text-align: center;
-		}
+	<link href="~/Content/owl.theme.default.min.css" rel="stylesheet" />
+	<!-- Theme style  -->
+	<link href="~/Content/style.css" rel="stylesheet" />
 
 
-		/* --- menu nav --- */
-		.menu-nav {
-			text-align: center;
-		}
+	<!-- Modernizr JS -->
+	<script src="~/Content/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
 
-			.menu-nav li {
-				position: relative;
-				display: inline-block;
-				margin-right: -4px;
-				border-bottom: 1px solid #ECECEC;
-				background-color: #FFF;
-			}
-
-				.menu-nav li + li {
-					-webkit-box-shadow: -1px 0px 0px 0px #ECECEC;
-					box-shadow: -1px 0px 0px 0px #ECECEC;
-				}
-
-				.menu-nav li a {
-					font-family: 'Quicksand', sans-serif;
-					display: block;
-					padding: 30px;
-				}
-
-				.menu-nav li.active a {
-					color: #FFF;
-					background-color: #f36700;
-				}
-
-				.menu-nav li.active:before, .menu-nav li.active:after {
-					content: "";
-					width: 0;
-					height: 0;
-					position: absolute;
-					bottom: -19px;
-					border-style: solid;
-					z-index: 1;
-				}
-
-				.menu-nav li.active:before {
-					left: 0;
-					border-width: 20px 60px 0 0;
-					border-color: #f36500 transparent transparent;
-				}
-
-				.menu-nav li.active:after {
-					right: 0;
-					border-width: 0 60px 20px 0;
-					border-color: transparent #f36500 transparent;
-				}
-
-		#menu-content {
-			overflow: auto;
-			padding: 30px 2% 30px;
-			background-color: #FFF;
-		}
-
-		.single-dish + .single-dish {
-			margin-top: 30px;
-		}
-
-		.single-dish .single-dish-heading {
-			position: relative;
-		}
-
-			.single-dish .single-dish-heading:before {
-				content: "";
-				display: block;
-				position: relative;
-				top: 25px;
-				height: 1px;
-				width: 100%;
-				border-top: 1px dashed #151515;
-				z-index: -1;
-			}
-
-		.single-dish .name {
-			display: inline-block;
-			font-family: 'Cabin', sans-serif;
-			background-color: #FFF;
-			padding-right: 10px;
-			font-weight: 400;
-		}
-
-		.single-dish .price {
-			float: right;
-			background-color: #FFF;
-			padding-left: 10px;
-			color: #f36700;
-		}
-	</style>
 </head>
 <body>
 
-	<div id="bottom-nav">
+	<div class="gtco-loader"></div>
 
-		<div class="container">
-			<nav id="nav">
+	<div id="page">
 
 
-			</nav>
+		<!-- <div class="page-inner"> -->
+		<nav class="gtco-nav" role="navigation">
+			<div class="gtco-container">
 
-		</div>
-	</div>
-	<ul id="navlist">
-		<li><a href="@Url.Content("~/Home/Index")">Home</a></li>
-		<li><a href="@Url.Content("~/Home/About")">About</a></li>
-		<li><a href="@Url.Content("~/Home/Contact")">Contact</a></li>
-		<li><a href="@Url.Content("~/Reservation/Index")">Reservations</a></li>
-		<li><a href="/Menu/">Menu</a></li>
-	</ul>
-
-	<header id="top" class="main-header">
-		<span class="title">Delicious tasting food available for a great price!</span>
-		<h1>Callum's Restaurant</h1>
-	</header>
-	<!-- Menu -->
-	<div id="menu" class="section">
-
-	
-		<div class="container">
-
-			<div class="row">
-
-				<div class="section-header text-center">
-					<h2 class="title white-text">A small taste</h2>
-				</div>
-				
-				<div id="menu-content" class="tab-content">
-
-					
-						<div class="col-md-6">
-
-						
-							<div class="single-dish">
-								<div class="single-dish-heading">
-									<h4 class="name">Chicken Burger</h4>
-
-									<h4 class="price">£5.00</h4>
-
-								</div>
-								
-								<p>Chicken breast burger with chips and salad</p>
-							</div>
-						
-							<div class="single-dish">
-								<div class="single-dish-heading">
-									<h4 class="name">Special Burger</h4>
-									
-									<h4 class="price">£8.00</h4>
-								</div>
-								<p>Beef burger with doner meat with choice of cheese and/or salad</p>
-							</div>
-						
-							<div class="single-dish">
-								<div class="single-dish-heading">
-									<h4 class="name">Pepperoni Pizza</h4>
-									<h4 class="price">£6.00</h4>
-								</div>
-								<p>Freshly cooked pepperoni pizza.</p>
-						
-
-						</div>
-
-						<div class="col-md-6">
-
-						
-							<div class="single-dish">
-								<div class="single-dish-heading">
-									<h4 class="name">Vegetarian Pizza</h4>
-									<h4 class="price">£7.00</h4>
-								</div>
-								<p>Perfect pizza for vegetarians</p>
-							</div>
-						
-							<div class="single-dish">
-								<div class="single-dish-heading">
-									<h4 class="name">Ham and Pineapple Pizzaa</h4>
-									<h4 class="price">£7.00</h4>
-								</div>
-								<p>Tasty and juicy hawaiian pizza</p>
-							</div>
-						
-							<div class="single-dish">
-								<div class="single-dish-heading">
-									<h4 class="name">Red Hot Chilli Pizza</h4>
-									<h4 class="price">£8.00</h4>
-								</div>
-								<p>Super spicy pizza</p>
-							</div>
-						
-							<div class="single-dish">
-								<div class="single-dish-heading">
-									<h4 class="name">Margherita </h4>
-									<h4 class="price">£4.00</h4>
-								</div>
-								<p>Classic cheese and tomato pizza</p>
-							</div>
-						
-						</div>
-
+				<div class="row">
+					<div class="col-sm-4 col-xs-12">
+						<div id="gtco-logo"><a href="index.html">Callum's Restaurant <em>.</em></a></div>
 					</div>
-				
-
-				</div>
-				
-
-			</div>
-		
-
-		</div>
-		</div>
-	
-	<div id="events" class="section">
-
-		<div class="container">
-
-		
-			<div class="row">
-
-				
-				<div class="section-header text-center">
-					<h4 class="sub-title">Special Event</h4>
-					<h2 class="title">Upcoming Event</h2>
-				</div>
-				
-				<div class="col-md-6">
-					<div class="event">
-						<div class="event-img">
-							<img src="~/Images/event01.jpg" alt="">
-							<div class="event-day">
-								<span>28<br>November</span>
-							</div>
-						</div>
-						<div class="event-content">
-							<p><i class="fa fa-clock-o"></i> 8.00PM - 10.00PM</p>
-							<h3><a href="blog.html">Grand Opening.</a></h3>
-							<p>Take part in the grand opening of the restaurant.</p>
-						</div>
+					<div class="col-xs-8 text-right menu-1">
+						<ul id="navlist">
+							<li><a href="@Url.Content("~/Home/Index")">Home</a></li>
+							<li><a href="@Url.Content("~/Home/About")">About</a></li>
+							<li><a href="@Url.Content("~/Home/Contact")">Contact</a></li>
+							<li><a href="@Url.Content("~/Reservation/Index")">Reservations</a></li>
+							<li><a href="/Menu/">Menu</a></li>
+						</ul>
 					</div>
 				</div>
 
+			</div>
+		</nav>
+
+		<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(/Images/background01.jpg)" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="gtco-container">
+				<div class="row">
+					<div class="col-md-12 col-md-offset-0 text-left">
+
+
+						<div class="row row-mt-15em">
+							<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+								<h1 class="cursive-font">All in good taste!</h1>
+							</div>
+							<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+								<div class="form-wrap">
+									<div class="tab">
+
+										<div class="tab-content">
+											<div class="tab-content-inner active" data-content="signup">
+												<h3 class="cursive-font">Table Reservation</h3>
+												<form action="#">
+													<div class="row form-group">
+														<div class="col-md-12">
+															<label for="activities">Persons</label>
+															<select name="#" id="activities" class="form-control">
+																<option value="">Persons</option>
+																<option value="">1</option>
+																<option value="">2</option>
+																<option value="">3</option>
+																<option value="">4</option>
+																<option value="">5+</option>
+															</select>
+														</div>
+													</div>
+													<div class="row form-group">
+														<div class="col-md-12">
+															<label for="date-start">Date</label>
+															<input type="text" id="date" class="form-control">
+														</div>
+													</div>
+													<div class="row form-group">
+														<div class="col-md-12">
+															<label for="date-start">Time</label>
+															<input type="text" id="time" class="form-control">
+														</div>
+													</div>
+
+													<div class="row form-group">
+														<div class="col-md-12">
+															<input type="submit" class="btn btn-primary btn-block" value="Reserve Now">
+														</div>
+													</div>
+												</form>
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="gtco-section">
+			<div class="gtco-container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+						<h2 class="cursive-font primary-color">Featured Dishes</h2>
+						<p>Browse some of our most popular dishes!.</p>
+					</div>
+				</div>
+				<div class="row">
+
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<a href="~/Images/image01.jpg" class="fh5co-card-item image-popup">
+							<figure>
+								<div class="overlay"><i class="ti-plus"></i></div>
+								<img src="~/Images/image01.jpg" alt="Image" class="img-responsive">
+							</figure>
+							<div class="fh5co-text">
+								<h2>Meat Feast Pizza</h2>
+								<p>Delicious and freshly cooked meat feast pizza for the meat lovers.</p>
+								<p><span class="price cursive-font">£10.00</span></p>
+							</div>
+						</a>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<a href="~/Images/image02.jpg" class="fh5co-card-item image-popup">
+							<figure>
+								<div class="overlay"><i class="ti-plus"></i></div>
+								<img src="~/Images/image02.jpg" alt="Image" class="img-responsive">
+							</figure>
+							<div class="fh5co-text">
+								<h2>Cheese and Garlic Toast</h2>
+								<p>Come and get your toast</p>
+								<p><span class="price cursive-font">£5.00</span></p>
+							</div>
+						</a>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<a href="~/Images/image03.jpg" class="fh5co-card-item image-popup">
+							<figure>
+								<div class="overlay"><i class="ti-plus"></i></div>
+								<img src="~/Images/image03.jpg" alt="Image" class="img-responsive">
+							</figure>
+							<div class="fh5co-text">
+								<h2>Grilled Chicken Salad</h2>
+								<p>Tasty grilled chicken salad with a side of chips</p>
+								<p><span class="price cursive-font">£4.99</span></p>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<a href="~/Images/image04.jpg" class="fh5co-card-item image-popup">
+							<figure>
+								<div class="overlay"><i class="ti-plus"></i></div>
+								<img src="~/Images/image04.jpg" alt="Image" class="img-responsive">
+							</figure>
+							<div class="fh5co-text">
+								<h2>Special Burger</h2>
+								<p>Beef burger with donner meat with cheese and/or salad</p>
+								<p><span class="price cursive-font">£7.00</span></p>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<a href="~/Images/image05.jpg" class="fh5co-card-item image-popup">
+							<figure>
+								<div class="overlay"><i class="ti-plus"></i></div>
+								<img src="~/Images/image05.jpg" alt="Image" class="img-responsive">
+							</figure>
+							<div class="fh5co-text">
+								<h2>BBQ Chicken Pizza</h2>
+								<p>BBQ Chicken.</p>
+								<p><span class="price cursive-font">£5.00</span></p>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<a href="~/Images/image06.jpg" class="fh5co-card-item image-popup">
+							<figure>
+								<div class="overlay"><i class="ti-plus"></i></div>
+								<img src="~/Images/image06.jpg" alt="Image" class="img-responsive">
+							</figure>
+							<div class="fh5co-text">
+								<h2>Hawaiian Pizza</h2>
+								<p>A sweet and meaty taste!</p>
+								<p><span class="price cursive-font">£5.59</span></p>
+							</div>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+		<div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="gtco-container text-center">
+				<div class="display-t">
+					<div class="display-tc">
+						<h1>&ldquo; Their high quality of service makes me back over and over again!&rdquo;</h1>
+						<p>&mdash; John Doe, CEO of XYZ Co.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="gtco-subscribe">
+			<div class="gtco-container">
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+						<h2 class="cursive-font">Subscribe</h2>
+						<p>Be the first to know about our website.</p>
+					</div>
+				</div>
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2">
+						<form class="form-inline">
+							<div class="col-md-6 col-sm-6">
+								<div class="form-group">
+									<label for="email" class="sr-only">Email</label>
+									<input type="email" class="form-control" id="email" placeholder="Your Email">
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<button type="submit" class="btn btn-default btn-block">Subscribe</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer id="gtco-footer" role="contentinfo" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="gtco-container">
+				<div class="row row-pb-md">
+
+
+
+
+					<div class="col-md-12 text-center">
+						<div class="gtco-widget">
+							<h3>Get In Touch</h3>
+							<ul class="gtco-quick-contact">
+								<li><a href="#"><i class="icon-phone"></i> +1 234 567 890</a></li>
+								<li><a href="#"><i class="icon-chat"></i> Live Chat</a></li>
+							</ul>
+						</div>
+						<div class="gtco-widget">
+							<h3>Get Social</h3>
+							<ul class="gtco-social-icons">
+								<li><a href="#"><i class="icon-twitter"></i></a></li>
+								<li><a href="#"><i class="icon-facebook"></i></a></li>
+								<li><a href="#"><i class="icon-linkedin"></i></a></li>
+								<li><a href="#"><i class="icon-dribbble"></i></a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-12 text-center copyright">
+						<p>
+
+						</p>
+					</div>
+
+				</div>
+
+
 
 			</div>
-		
-
-		</div>
-		
+		</footer>
+		<!-- </div> -->
 
 	</div>
-	
-	<footer id="footer">
 
-		
-		<div class="container">
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
 
-		
-			<div class="row">
+	<!-- jQuery -->
 
-			
-				<div class="col-md-6">
-					<span class="copyright"> Callum Cheshire</span>
-				</div>
-			
-				<div class="col-md-6">
-					<nav class="footer-nav">
-						<a href="@Url.Content("~/Home/Index")">Home</a>
-						<a href="@Url.Content("~/Home/About")">About</a>
-						<a href="@Url.Content("~/Home/Contact")">Contact</a>
-						<a href="@Url.Content("~/Reservation/Index")">Reservations</a>
-						<a href="/Menu/">Menu</a>
-					</nav>
-				</div>
-			
+	<script src="~/Content/jquery.min.js"></script>
 
-			</div>
-	
 
-		</div>
-	
+	<!-- jQuery Easing -->
+	@*<script src="~/Content/jquery.easing.1.3.js"></script>*@
 
-	</footer>
+	<!-- Bootstrap -->
+	@*<script src="~/Content/bootstrap.min.js"></script>*@
+
+	<!-- Waypoints -->
+	<script src="~/Content/jquery.waypoints.min.js"></script>
+
+	<!-- Carousel -->
+	<script src="~/Content/owl.carousel.min.js"></script>
+
+	<!-- countTo -->
+	<script src="~/Content/jquery.countTo.js"></script>
+	<!-- Stellar Parallax -->
+
+	<script src="~/Content/jquery.stellar.min.js"></script>
+
+	<!-- Magnific Popup -->
+	<script src="~/Content/jquery.magnific-popup.min.js"></script>
+	<script src="~/Content/magnific-popup-options.js"></script>
+	<script src="~/Content/moment.min.js"></script>
+	<script src="~/Content/bootstrap-datetimepicker.min.js"></script>
+
+	<!-- Main -->
+	<script src="~/Content/main.js"></script>
 </body>
 </html>
 
-<script>
-
-	
-
-</script>

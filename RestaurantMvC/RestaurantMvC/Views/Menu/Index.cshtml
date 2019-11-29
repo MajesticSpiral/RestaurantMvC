@@ -62,7 +62,7 @@
 
 	.white-text {
 		color: #FFF;
-		text-align:center;
+		text-align: center;
 	}
 
 	/* --- Section --- */
@@ -100,51 +100,52 @@
 		text-align: center;
 	}
 
-	.menu-nav li {
-		position: relative;
-		display: inline-block;
-		margin-right: -4px;
-		border-bottom: 1px solid #ECECEC;
-		background-color: #FFF;
-	}
-
-		.menu-nav li + li {
-			-webkit-box-shadow: -1px 0px 0px 0px #ECECEC;
-			box-shadow: -1px 0px 0px 0px #ECECEC;
+		.menu-nav li {
+			position: relative;
+			display: inline-block;
+			margin-right: -4px;
+			border-bottom: 1px solid #ECECEC;
+			background-color: #FFF;
 		}
 
-		.menu-nav li a {
-			font-family: 'Quicksand', sans-serif;
-			display: block;
-			padding: 30px;
-		}
+			.menu-nav li + li {
+				-webkit-box-shadow: -1px 0px 0px 0px #ECECEC;
+				box-shadow: -1px 0px 0px 0px #ECECEC;
+			}
 
-		.menu-nav li.active a {
-			color: #FFF;
-			background-color: #f36700;
-		}
+			.menu-nav li a {
+				font-family: 'Quicksand', sans-serif;
+				display: block;
+				padding: 30px;
+			}
 
-		.menu-nav li.active:before, .menu-nav li.active:after {
-			content: "";
-			width: 0;
-			height: 0;
-			position: absolute;
-			bottom: -19px;
-			border-style: solid;
-			z-index: 1;
-		}
+			.menu-nav li.active a {
+				color: #FFF;
+				background-color: #f36700;
+			}
 
-		.menu-nav li.active:before {
-			left: 0;
-			border-width: 20px 60px 0 0;
-			border-color: #f36500 transparent transparent;
-		}
+			.menu-nav li.active:before, .menu-nav li.active:after {
+				content: "";
+				width: 0;
+				height: 0;
+				position: absolute;
+				bottom: -19px;
+				border-style: solid;
+				z-index: 1;
+			}
 
-		.menu-nav li.active:after {
-			right: 0;
-			border-width: 0 60px 20px 0;
-			border-color: transparent #f36500 transparent;
-		}
+			.menu-nav li.active:before {
+				left: 0;
+				border-width: 20px 60px 0 0;
+				border-color: #f36500 transparent transparent;
+			}
+
+			.menu-nav li.active:after {
+				right: 0;
+				border-width: 0 60px 20px 0;
+				border-color: transparent #f36500 transparent;
+			}
+
 	#menu-content {
 		overflow: auto;
 		padding: 30px 2% 30px;
@@ -157,7 +158,6 @@
 
 	.single-dish .single-dish-heading {
 		position: relative;
-		
 	}
 
 		.single-dish .single-dish-heading:before {
@@ -172,7 +172,7 @@
 		}
 
 	.single-dish .name {
-		display:inline-block;
+		display: inline-block;
 		font-family: 'Cabin', sans-serif;
 		background-color: #FFF;
 		padding-right: 10px;
@@ -213,156 +213,395 @@
 			background-color: #000;
 		}
 </style>
-<ul id="navlist">
-	<li><a href="@Url.Content("~/Home/Index")">Home</a></li>
-	<li><a href="@Url.Content("~/Home/About")">About</a></li>
-	<li><a href="@Url.Content("~/Home/Contact")">Contact</a></li>
-	<li><a href="@Url.Content("~/Reservation/Index")">Reservations</a></li>
-	<li><a href="/Menu/">Menu</a></li>
-</ul>
-<!-- Menu -->
-<div id="menu" class="section">
 
-	
+@{
+	ViewBag.Title = "Menu";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE HTML>
 
-	<!-- Backgound Image -->
-	<div class="bg-image bg-parallax overlay" style="background-image:url(/Images/background01.jpg)"></div>
-	<!-- /Backgound Image -->
-	<!-- container -->
-	<div class="container">
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Menu</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- row -->
-		<div class="row">
 
-			<div class="section-header text-center">
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
 
-				<h2 class="title white-text">Our Menu</h2>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+
+	<!-- Animate.css -->
+
+	<link href="~/Content/animate.css" rel="stylesheet" />
+
+	<!-- Icomoon Icon Fonts-->
+	<link href="~/Content/icomoon.css" rel="stylesheet" />
+
+	<!-- Themify Icons-->
+	<link href="~/Content/themify-icons.css" rel="stylesheet" />
+	<!-- Bootstrap  -->
+	<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+	<!-- Magnific Popup -->
+	<link href="~/Content/magnific-popup.css" rel="stylesheet" />
+	<!-- Bootstrap DateTimePicker -->
+	<link href="~/Content/bootstrap-datepicker.min.css" rel="stylesheet" />
+
+
+	<!-- Owl Carousel  -->
+
+	<link href="~/Content/owl.carousel.min.css" rel="stylesheet" />
+
+	<link href="~/Content/owl.theme.default.min.css" rel="stylesheet" />
+	<!-- Theme style  -->
+	<link href="~/Content/style.css" rel="stylesheet" />
+
+
+	<!-- Modernizr JS -->
+	<script src="~/Content/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+	<div class="gtco-loader"></div>
+
+	<div id="page">
+		<!-- <div class="page-inner"> -->
+		<nav class="gtco-nav" role="navigation">
+			<div class="gtco-container">
+
+				<div class="row">
+					<div class="col-sm-4 col-xs-12">
+						<div id="gtco-logo"><a href="index.html">Callum's Restaurant <em>.</em></a></div>
+					</div>
+					<div class="col-xs-8 text-right menu-1">
+						<ul id="navlist">
+							<li><a href="@Url.Content("~/Home/Index")">Home</a></li>
+							<li><a href="@Url.Content("~/Home/About")">About</a></li>
+							<li><a href="@Url.Content("~/Home/Contact")">Contact</a></li>
+							<li><a href="@Url.Content("~/Reservation/Index")">Reservations</a></li>
+							<li><a href="/Menu/">Menu</a></li>
+						</ul>
+					</div>
+				</div>
+
 			</div>
+		</nav>
 
-			<!-- menu nav -->
-			<ul class="menu-nav">
-				<li class="active"><a data-toggle="tab" href="#menu1">Dinner</a></li>
-				<li><a data-toggle="tab" href="#menu1">Drinks</a></li>
-				<li><a data-toggle="tab" href="#menu1">Lunch</a></li>
-				<li><a data-toggle="tab" href="#menu1">Dessert</a></li>
-			</ul>
-			<!-- /menu nav -->
-			<!-- menu content -->
-			<div id="menu-content" class="tab-content">
+		<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(/Images/background01.jpg)" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="gtco-container">
+				<div class="row">
+					<div class="col-md-12 col-md-offset-0 text-left">
 
-				<!-- menu1 -->
-				<div id="menu1" class="tab-pane fade in active">
-					<div class="col-md-6">
 
-						<!-- single dish -->
-						<div class="single-dish">
-							<div class="single-dish-heading">
-								<h4 class="name">Meat Feast Pizza</h4>
-								<h4 class="price">£10.00</h4>
+						<div class="row row-mt-15em">
+							<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+								<h1 class="cursive-font">All in good taste!</h1>
 							</div>
-							<p>Delicious Meat Feast Pizza.</p>
-						</div>
-						<!-- /single dish -->
-						<!-- single dish -->
-						<div class="single-dish">
-							<div class="single-dish-heading">
-								<h4 class="name">Fish and Chips</h4>
-								<h4 class="price">£7.00</h4>
+							<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+								<div class="form-wrap">
+									<div class="tab">
+
+										<div class="tab-content">
+											<div class="tab-content-inner active" data-content="signup">
+												<h3 class="cursive-font">Table Reservation</h3>
+												<form action="#">
+													<div class="row form-group">
+														<div class="col-md-12">
+															<label for="activities">Persons</label>
+															<select name="#" id="activities" class="form-control">
+																<option value="">Persons</option>
+																<option value="">1</option>
+																<option value="">2</option>
+																<option value="">3</option>
+																<option value="">4</option>
+																<option value="">5+</option>
+															</select>
+														</div>
+													</div>
+													<div class="row form-group">
+														<div class="col-md-12">
+															<label for="date-start">Date</label>
+															<input type="text" id="date" class="form-control">
+														</div>
+													</div>
+													<div class="row form-group">
+														<div class="col-md-12">
+															<label for="date-start">Time</label>
+															<input type="text" id="time" class="form-control">
+														</div>
+													</div>
+
+													<div class="row form-group">
+														<div class="col-md-12">
+															<input type="submit" class="btn btn-primary btn-block" value="Reserve Now">
+														</div>
+													</div>
+												</form>
+											</div>
+
+
+										</div>
+									</div>
+								</div>
 							</div>
-							<p>Classic Fish and Chips with side of salad.</p>
 						</div>
-						<!-- /single dish -->
-						<!-- single dish -->
-						<div class="single-dish">
-							<div class="single-dish-heading">
-								<h4 class="name">Chicken Burger</h4>
-								<h4 class="price">£5.00</h4>
-							</div>
-							<p>Chicken breast burger with chips and salad</p>
-						</div>
-						<!-- /single dish -->
-						<!-- single dish -->
-						<div class="single-dish">
-							<div class="single-dish-heading">
-								<h4 class="name">Special Burger</h4>
-								<h4 class="price">£8.00</h4>
-							</div>
-							<p>Beef burger with doner meat with choice of cheese and/or salad</p>
-						</div>
-						<!-- /single dish -->
-						<!-- single dish -->
-						<div class="single-dish">
-							<div class="single-dish-heading">
-								<h4 class="name">Pepperoni Pizza</h4>
-								<h4 class="price">£6.00</h4>
-							</div>
-							<p>Freshly cooked pepperoni pizza.</p>
-						</div>
-						<!-- /single dish -->
+
 
 					</div>
+				</div>
+			</div>
+		</header>
 
-					<div class="col-md-6">
+		<div class="gtco-section">
+			<div class="gtco-container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+						<h2 class="cursive-font primary-color">Discover Our Menu</h2>
+						<p>Have a taste!</p>
+					</div>
+				</div>
+				<div class="row">
+					<!-- Menu -->
+					<div id="menu" class="section">
 
-						<!-- single dish -->
-						<div class="single-dish">
-							<div class="single-dish-heading">
-								<h4 class="name">Vegetarian Pizza</h4>
-								<h4 class="price">£7.00</h4>
-							</div>
-							<p>Perfect pizza for vegetarians</p>
-						</div>
-						<!-- /single dish -->
-						<!-- single dish -->
-						<div class="single-dish">
-							<div class="single-dish-heading">
-								<h4 class="name">Ham and Pineapple Pizzaa</h4>
-								<h4 class="price">£7.00</h4>
-							</div>
-							<p>Tasty and juicy hawaiian pizza</p>
-						</div>
-						<!-- /single dish -->
-						<!-- single dish -->
-						<div class="single-dish">
-							<div class="single-dish-heading">
-								<h4 class="name">Red Hot Chilli Pizza</h4>
-								<h4 class="price">£8.00</h4>
-							</div>
-							<p>Super spicy pizza</p>
-						</div>
-						<!-- /single dish -->
-						<!-- single dish -->
-						<div class="single-dish">
-							<div class="single-dish-heading">
-								<h4 class="name">Margherita </h4>
-								<h4 class="price">£4.00</h4>
-							</div>
-							<p>Classic cheese and tomato pizza</p>
-						</div>
-						<!-- /single dish -->
-						<!-- single dish -->
-						<div class="single-dish">
-							<div class="single-dish-heading">
-								<h4 class="name">BBQ Chicken Pizza</h4>
-								<h4 class="price">£8.00</h4>
-							</div>
-							<p>BBQ Chicen pizza with BBQ base</p>
-						</div>
-						<!-- /single dish -->
+						<!-- Backgound Image -->
+						<div class="bg-image bg-parallax overlay" style="background-image:url(/Images/background01.jpg)"></div>
+						<!-- /Backgound Image -->
+						<!-- container -->
+						<div class="container">
 
+							<!-- row -->
+							<div class="row">
+
+								<div class="section-header text-center">
+
+									<h2 class="title white-text">Our Menu</h2>
+								</div>
+
+								<!-- menu nav -->
+								<ul class="menu-nav">
+									<li class="active"><a data-toggle="tab" href="#menu1">Dinner</a></li>
+									<li><a data-toggle="tab" href="#menu1">Drinks</a></li>
+									<li><a data-toggle="tab" href="#menu1">Lunch</a></li>
+									<li><a data-toggle="tab" href="#menu1">Dessert</a></li>
+								</ul>
+								<!-- /menu nav -->
+								<!-- menu content -->
+								<div id="menu-content" class="tab-content">
+
+									<!-- menu1 -->
+									<div id="menu1" class="tab-pane fade in active">
+										<div class="col-md-6">
+
+											<!-- single dish -->
+											<div class="single-dish">
+												<div class="single-dish-heading">
+													<h4 class="name">Meat Feast Pizza</h4>
+													<h4 class="price">£10.00</h4>
+												</div>
+												<p>Delicious Meat Feast Pizza.</p>
+											</div>
+											<!-- /single dish -->
+											<!-- single dish -->
+											<div class="single-dish">
+												<div class="single-dish-heading">
+													<h4 class="name">Fish and Chips</h4>
+													<h4 class="price">£7.00</h4>
+												</div>
+												<p>Classic Fish and Chips with side of salad.</p>
+											</div>
+											<!-- /single dish -->
+											<!-- single dish -->
+											<div class="single-dish">
+												<div class="single-dish-heading">
+													<h4 class="name">Chicken Burger</h4>
+													<h4 class="price">£5.00</h4>
+												</div>
+												<p>Chicken breast burger with chips and salad</p>
+											</div>
+											<!-- /single dish -->
+											<!-- single dish -->
+											<div class="single-dish">
+												<div class="single-dish-heading">
+													<h4 class="name">Special Burger</h4>
+													<h4 class="price">£8.00</h4>
+												</div>
+												<p>Beef burger with doner meat with choice of cheese and/or salad</p>
+											</div>
+											<!-- /single dish -->
+											<!-- single dish -->
+											<div class="single-dish">
+												<div class="single-dish-heading">
+													<h4 class="name">Pepperoni Pizza</h4>
+													<h4 class="price">£6.00</h4>
+												</div>
+												<p>Freshly cooked pepperoni pizza.</p>
+											</div>
+											<!-- /single dish -->
+
+										</div>
+
+										<div class="col-md-6">
+
+											<!-- single dish -->
+											<div class="single-dish">
+												<div class="single-dish-heading">
+													<h4 class="name">Vegetarian Pizza</h4>
+													<h4 class="price">£7.00</h4>
+												</div>
+												<p>Perfect pizza for vegetarians</p>
+											</div>
+											<!-- /single dish -->
+											<!-- single dish -->
+											<div class="single-dish">
+												<div class="single-dish-heading">
+													<h4 class="name">Ham and Pineapple Pizzaa</h4>
+													<h4 class="price">£7.00</h4>
+												</div>
+												<p>Tasty and juicy hawaiian pizza</p>
+											</div>
+											<!-- /single dish -->
+											<!-- single dish -->
+											<div class="single-dish">
+												<div class="single-dish-heading">
+													<h4 class="name">Red Hot Chilli Pizza</h4>
+													<h4 class="price">£8.00</h4>
+												</div>
+												<p>Super spicy pizza</p>
+											</div>
+											<!-- /single dish -->
+											<!-- single dish -->
+											<div class="single-dish">
+												<div class="single-dish-heading">
+													<h4 class="name">Margherita </h4>
+													<h4 class="price">£4.00</h4>
+												</div>
+												<p>Classic cheese and tomato pizza</p>
+											</div>
+											<!-- /single dish -->
+											<!-- single dish -->
+											<div class="single-dish">
+												<div class="single-dish-heading">
+													<h4 class="name">BBQ Chicken Pizza</h4>
+													<h4 class="price">£8.00</h4>
+												</div>
+												<p>BBQ Chicen pizza with BBQ base</p>
+											</div>
+											<!-- /single dish -->
+
+										</div>
+
+									</div>
+									<!-- /menu1 -->
+
+								</div>
+								<!-- /menu content -->
+
+							</div>
+							<!-- /row -->
+
+						</div>
+						<!-- /container -->
+
+					</div>
+					<!-- /Menu -->
+				</div>
+			</div>
+		</div>
+
+		<footer id="gtco-footer" role="contentinfo" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="gtco-container">
+				<div class="row row-pb-md">
+
+					<div class="col-md-12 text-center">
+						<div class="gtco-widget">
+							<h3>Get In Touch</h3>
+							<ul class="gtco-quick-contact">
+								<li><a href="#"><i class="icon-phone"></i> +1 234 567 890</a></li>
+								<li><a href="#"><i class="icon-chat"></i> Live Chat</a></li>
+							</ul>
+						</div>
+						<div class="gtco-widget">
+							<h3>Get Social</h3>
+							<ul class="gtco-social-icons">
+								<li><a href="#"><i class="icon-twitter"></i></a></li>
+								<li><a href="#"><i class="icon-facebook"></i></a></li>
+								<li><a href="#"><i class="icon-linkedin"></i></a></li>
+								<li><a href="#"><i class="icon-dribbble"></i></a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-12 text-center copyright">
+						<p>
+						</p>
 					</div>
 
 				</div>
-				<!-- /menu1 -->
+
+
 
 			</div>
-			<!-- /menu content -->
-
-		</div>
-		<!-- /row -->
+		</footer>
+		<!-- </div> -->
 
 	</div>
-	<!-- /container -->
 
-</div>
-<!-- /Menu -->
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<!-- jQuery -->
+
+	<script src="~/Content/jquery.min.js"></script>
+
+
+	<!-- jQuery Easing -->
+	<script src="~/Content/jquery.easing.1.3.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="~/Content/bootstrap.min.js"></script>
+
+	<!-- Waypoints -->
+	<script src="~/Content/jquery.waypoints.min.js"></script>
+
+	<!-- Carousel -->
+	<script src="~/Content/owl.carousel.min.js"></script>
+
+	<!-- countTo -->
+	<script src="~/Content/jquery.countTo.js"></script>
+	<!-- Stellar Parallax -->
+
+	<script src="~/Content/jquery.stellar.min.js"></script>
+
+	<!-- Magnific Popup -->
+	<script src="~/Content/jquery.magnific-popup.min.js"></script>
+	<script src="~/Content/magnific-popup-options.js"></script>
+	<script src="~/Content/moment.min.js"></script>
+	<script src="~/Content/bootstrap-datetimepicker.min.js"></script>
+
+	<!-- Main -->
+	<script src="~/Content/main.js"></script>
+</body>
+</html>
+
+

@@ -3,15 +3,65 @@
 	ViewBag.Title = "Contact";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html>
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>@ViewBag.Title - My ASP.NET Application</title>
-	<link href="~/Content/MyStyles.css" rel="stylesheet" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+
+	<!-- Animate.css -->
+
+	<link href="~/Content/animate.css" rel="stylesheet" />
+
+	<!-- Icomoon Icon Fonts-->
+	<link href="~/Content/icomoon.css" rel="stylesheet" />
+
+	<!-- Themify Icons-->
+	<link href="~/Content/themify-icons.css" rel="stylesheet" />
+	<!-- Bootstrap  -->
+	<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+	<!-- Magnific Popup -->
+	<link href="~/Content/magnific-popup.css" rel="stylesheet" />
+	<!-- Bootstrap DateTimePicker -->
+	<link href="~/Content/bootstrap-datepicker.min.css" rel="stylesheet" />
+
+
+	<!-- Owl Carousel  -->
+
+	<link href="~/Content/owl.carousel.min.css" rel="stylesheet" />
+
+	<link href="~/Content/owl.theme.default.min.css" rel="stylesheet" />
+	<!-- Theme style  -->
+	<link href="~/Content/style.css" rel="stylesheet" />
+
+
+	<!-- Modernizr JS -->
+	<script src="~/Content/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
 
 	<style>
+
 		/* Style inputs with type="text", select elements and textareas */
 		input[type=text], select, textarea {
 			width: 100%; /* Full width */
@@ -45,65 +95,214 @@
 			background-color: #f2f2f2;
 			padding: 20px;
 		}
-		label {
-			float: left;
-		}
 	</style>
 </head>
 
-
 <body>
 
-	<ul id="navlist">
-		<li><a href="@Url.Content("~/Home/Index")">Home</a></li>
-		<li><a href="@Url.Content("~/Home/About")">About</a></li>
-		<li><a href="@Url.Content("~/Home/Contact")">Contact</a></li>
-		<li><a href="@Url.Content("~/Reservation/Index")">Reservations</a></li>
-		<li><a href="/Menu/">Menu</a></li>
-	</ul>
-	<header id="top" class="main-header">
-		<span class="title">Delicious tasting food available for a great price!</span>
-		<h1>Callum's Restaurant</h1>
-	</header>
-	<div class="primary-content t-border">
-		<h2>Contact Us</h2>
-		<p class="intro">
-			Please fill in the form to send an enquiry we will get to you as soon as we can.
-		</p>
+	<div class="gtco-loader"></div>
 
-		<div class="container">
-			<form a href="#">
+	<div id="page">
 
-				<label for="fname">First Name</label>
-				<input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-				<label for="lname">Last Name</label>
-				<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+		<!-- <div class="page-inner"> -->
+		<nav class="gtco-nav" role="navigation">
+			<div class="gtco-container">
 
-				<label for="lname">Email</label>
-				<input type="text" id="Email" name="Email" placeholder="Email..">
+				<div class="row">
+					<div class="col-sm-4 col-xs-12">
+						<div id="gtco-logo"><a href="index.html">Callum's Restaurant <em>.</em></a></div>
+					</div>
+					<div class="col-xs-8 text-right menu-1">
+						<ul id="navlist">
+							<li><a href="@Url.Content("~/Home/Index")">Home</a></li>
+							<li><a href="@Url.Content("~/Home/About")">About</a></li>
+							<li><a href="@Url.Content("~/Home/Contact")">Contact</a></li>
+							<li><a href="@Url.Content("~/Reservation/Index")">Reservations</a></li>
+							<li><a href="/Menu/">Menu</a></li>
+						</ul>
+					</div>
+				</div>
 
-				<label for="country">Country</label>
-				<select id="country" name="country">
-					<option value="australia">United Kingdom</option>
-					<option value="canada">Canada</option>
-					<option value="usa">USA</option>
-				</select>
+			</div>
+		</nav>
 
-				<label for="subject">Subject</label>
-				<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+		<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(/Images/background01.jpg)" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="gtco-container">
+				<div class="row">
+					<div class="col-md-12 col-md-offset-0 text-left">
 
-				<input type="submit" value="Submit">
 
-			</form>
+						<div class="row row-mt-15em">
+							<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+								<h1 class="cursive-font">All in good taste!</h1>
+							</div>
+							<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+								<div class="form-wrap">
+									<div class="tab">
+
+										<div class="tab-content">
+											<div class="tab-content-inner active" data-content="signup">
+												<h3 class="cursive-font">Table Reservation</h3>
+												<form action="#">
+													<div class="row form-group">
+														<div class="col-md-12">
+															<label for="activities">Persons</label>
+															<select name="#" id="activities" class="form-control">
+																<option value="">Persons</option>
+																<option value="">1</option>
+																<option value="">2</option>
+																<option value="">3</option>
+																<option value="">4</option>
+																<option value="">5+</option>
+															</select>
+														</div>
+													</div>
+													<div class="row form-group">
+														<div class="col-md-12">
+															<label for="date-start">Date</label>
+															<input type="text" id="date" class="form-control">
+														</div>
+													</div>
+													<div class="row form-group">
+														<div class="col-md-12">
+															<label for="date-start">Time</label>
+															<input type="text" id="time" class="form-control">
+														</div>
+													</div>
+
+													<div class="row form-group">
+														<div class="col-md-12">
+															<input type="submit" class="btn btn-primary btn-block" value="Reserve Now">
+														</div>
+													</div>
+												</form>
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="gtco-section">
+			<div class="gtco-container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+						<h2 class="cursive-font primary-color">Contact Us</h2>
+						<p>Welcome to my restaurant</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="container">
+						<form action="action_page.php">
+
+							<label for="fname">First Name</label>
+							<input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+							<label for="lname">Last Name</label>
+							<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+							<label for="country">Country</label>
+							<select id="country" name="country">
+								<option value="australia">Australia</option>
+								<option value="canada">Canada</option>
+								<option value="usa">USA</option>
+							</select>
+
+							<label for="subject">Subject</label>
+							<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+							<input type="submit" value="Submit">
+
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
 
+		<footer id="gtco-footer" role="contentinfo" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="gtco-container">
+				<div class="row row-pb-md">
+
+					<div class="col-md-12 text-center">
+						<div class="gtco-widget">
+							<h3>Get In Touch</h3>
+							<ul class="gtco-quick-contact">
+								<li><a href="#"><i class="icon-phone"></i> +1 234 567 890</a></li>
+								<li><a href="#"><i class="icon-chat"></i> Live Chat</a></li>
+							</ul>
+						</div>
+						<div class="gtco-widget">
+							<h3>Get Social</h3>
+							<ul class="gtco-social-icons">
+								<li><a href="#"><i class="icon-twitter"></i></a></li>
+								<li><a href="#"><i class="icon-facebook"></i></a></li>
+								<li><a href="#"><i class="icon-linkedin"></i></a></li>
+								<li><a href="#"><i class="icon-dribbble"></i></a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-12 text-center copyright">
+						<p>
+						</p>
+					</div>
+
+				</div>
+
+
+
+			</div>
+		</footer>
+		<!-- </div> -->
 
 	</div>
-	<!-- End .primary-content -->
-	@*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<!-- jQuery -->
+
+	<script src="~/Content/jquery.min.js"></script>
+
+
+	<!-- jQuery Easing -->
+	<script src="~/Content/jquery.easing.1.3.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="~/Content/bootstrap.min.js"></script>
+
+	<!-- Waypoints -->
+	<script src="~/Content/jquery.waypoints.min.js"></script>
+
+	<!-- Carousel -->
+	<script src="~/Content/owl.carousel.min.js"></script>
+
+	<!-- countTo -->
+	<script src="~/Content/jquery.countTo.js"></script>
+	<!-- Stellar Parallax -->
+
+	<script src="~/Content/jquery.stellar.min.js"></script>
+
+	<!-- Magnific Popup -->
+	<script src="~/Content/jquery.magnific-popup.min.js"></script>
+	<script src="~/Content/magnific-popup-options.js"></script>
+	<script src="~/Content/moment.min.js"></script>
+	<script src="~/Content/bootstrap-datetimepicker.min.js"></script>
+
+	<!-- Main -->
+	<script src="~/Content/main.js"></script>
 </body>
 </html>
-
-
 
