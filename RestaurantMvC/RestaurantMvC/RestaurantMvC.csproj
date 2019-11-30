@@ -259,7 +259,12 @@
     <Content Include="Global.asax" />
     <Content Include="Images\background01.jpg" />
     <Content Include="Images\background03.jpg" />
+    <Content Include="Images\cheeseontoast.jfif" />
+    <Content Include="Images\chickenpizza.jfif" />
+    <Content Include="Images\chickensalad.jfif" />
     <Content Include="Images\event01.jpg" />
+    <Content Include="Images\grilledchicken-salad.jfif" />
+    <Content Include="Images\hawaiianpizza.jfif" />
     <Content Include="Images\image01.jpg" />
     <Content Include="Images\image02.jpg" />
     <Content Include="Images\image03.jpg" />
@@ -269,6 +274,9 @@
     <Content Include="Images\image07.jpg" />
     <Content Include="Images\img_bg_1.jpg" />
     <Content Include="Images\loader.gif" />
+    <Content Include="Images\meatfeast-pizza.jpg" />
+    <Content Include="Images\specialburger.jfif" />
+    <Content Include="Images\toast.jfif" />
     <Content Include="Models\Restaurant.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Restaurant.edmx</DependentUpon>
